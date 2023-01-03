@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">PARKiT</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/admin-dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/client">Client</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/site-list">Site-List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/createSite">Create-Site</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/floors">Floors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/parking">Parking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/users">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/reports">Reports</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<div>
+  <router-outlet></router-outlet>
+</div>
+

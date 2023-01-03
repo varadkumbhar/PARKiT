@@ -1,0 +1,138 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="" [ngClass]="isSidePanel?'':'col-md-12' ">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-md-6">
+              Site List
+            </div>
+            <div class="col-md-6 text-end">
+              <button class="btn btn-sm btn-primary" (click)="addForm()">Add</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Sr No</th>
+                <th>Site Name</th>
+                <th>Site City</th>
+                <th>Site Address</th>
+                <th>Site PinCode</th>
+                <th>Total Buildings</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let list of siteArray, let sr=index">
+                <td>{{sr + 1}}</td>
+                <td>{{list.siteName}}</td>
+                <td>{{list.siteCity}}</td>
+                <td>{{list.siteAddress}}</td>
+                <td>{{list.sitePinCode}}</td>
+                <td>{{list.totalBuildings}}</td>
+                <td>
+                  <button class="btn btn-sm btn-warning mx-2">Edit</button>
+                  <button class="btn btn-sm btn-secondary">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 mt-3" *ngIf="isSidePanel">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-md-6">
+              Add Site
+            </div>
+            <div class="col-md-6 text-end">
+              <button class="btn btn-sm btn-primary" (click)="closeForm()">Close</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="">Site Name</label>
+                  <input type="text" name="siteName" id="" class="form-control">
+
+                  <label for="">Site addres</label>
+                  <input type="text" name="siteAddress" id="" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label for="">Site city</label>
+                  <input type="text" name="siteCity" id="" class="form-control">
+
+                  <label for="">Site Pincode</label>
+                  <input type="text" name="sitePinCode" id="" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 text-center mt-4">
+                  <button class="btn btn-sm btn-primary mx-2">Save</button>
+                  <button class="btn btn-sm btn-secondary">Cancle</button>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="">Building Name</label>
+                  <input type="text" name="sitePinCode" id="" class="form-control">
+                </div>
+                <div class="col-md-3">
+                  <label for="">Manager Name</label>
+                  <input type="text" name="sitePinCode" id="" class="form-control">
+                </div>
+                <div class="col-md-3">
+                  <label for="">Contact Number</label>
+                  <input type="text" name="sitePinCode" id="" class="form-control">
+                </div>
+                <div class="col-md-3">
+                  <button class="btn btn-sm btn-primary mx-2">Add</button>
+                  <button class="btn btn-sm btn-secondary">cancle</button>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Sr No</th>
+                        <th>Building Name</th>
+                        <th>Manager Name</th>
+                        <th>Contact Number</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let list of buildingList, let sr=index">
+                        <td>{{sr+1}}</td>
+                        <td>{{list.buildingName}}</td>
+                        <td>{{list.buildingManagerName}}</td>
+                        <td>{{list.contactNo}}</td>
+                        <td>
+                          <button class="btn btn-sm btn-secondary">Delete</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
